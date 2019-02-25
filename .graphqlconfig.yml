@@ -1,0 +1,16 @@
+projects:
+  hackernewsreactapoll:
+    schemaPath: src/graphql/schema.json
+    includes:
+      - src/resolvers/**/*.js
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: javascript
+        generatedFileName: ''
+        docsFilePath: src/graphql
+        graphQLApiId: fht3xlwmu5dptk4gkigbehtybu
+      endpoints:
+        prod: >-
+          https://k5nmn4pitreq5mfcao7y2jmxaa.appsync-api.us-east-2.amazonaws.com/graphql
