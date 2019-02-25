@@ -1,0 +1,14 @@
+{
+    "prod": {
+        "awscloudformation": {
+            "AuthRoleName": "hackernewsreactapoll-20190225130734-authRole",
+            "UnauthRoleArn": "arn:aws:iam::937966287001:role/hackernewsreactapoll-20190225130734-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::937966287001:role/hackernewsreactapoll-20190225130734-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "hackernewsreactapoll-20190225130734-deployment",
+            "UnauthRoleName": "hackernewsreactapoll-20190225130734-unauthRole",
+            "StackName": "hackernewsreactapoll-20190225130734",
+            "StackId": "arn:aws:cloudformation:us-east-2:937966287001:stack/hackernewsreactapoll-20190225130734/fe46b7b0-3938-11e9-a7e2-0659c08a3f80"
+        }
+    }
+}
