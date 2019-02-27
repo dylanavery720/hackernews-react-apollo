@@ -11,6 +11,11 @@ import { BrowserRouter } from 'react-router-dom'
 import { AUTH_TOKEN } from './constants';
 import { setContext } from 'apollo-link-context'
 
+import Amplify from '@aws-amplify/core'
+import config from './aws-exports'
+Amplify.configure(config)
+
+
 const apiUrl = process.env.NODE_ENV === 'production' ? process.env.REACT_APP_PROD_API_URL : 'http://localhost:4000';
 
 const httpLink = createHttpLink({
