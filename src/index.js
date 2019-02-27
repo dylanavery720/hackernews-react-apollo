@@ -11,22 +11,6 @@ import { BrowserRouter } from 'react-router-dom'
 import { AUTH_TOKEN } from './constants';
 import { setContext } from 'apollo-link-context'
 
-
-import Amplify, { API } from "aws-amplify";
-import aws_config from "./aws-exports";
- 
-// Considering you have an existing aws-exports.js configuration file 
-Amplify.configure(aws_config);
-
-// Configure a custom GraphQL endpoint
-Amplify.configure({
-  API: {
-    graphql_endpoint: 'https://k5nmn4pitreq5mfcao7y2jmxaa.appsync-api.us-east-2.amazonaws.com/graphql'
-  }
-});
-
-
-
 const apiUrl = process.env.NODE_ENV === 'production' ? process.env.REACT_APP_PROD_API_URL : 'http://localhost:4000';
 
 const httpLink = createHttpLink({
