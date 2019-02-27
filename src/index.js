@@ -11,9 +11,14 @@ import { BrowserRouter } from 'react-router-dom'
 import { AUTH_TOKEN } from './constants';
 import { setContext } from 'apollo-link-context'
 
+const apiUrl = process.env.NODE_ENV === 'production' ? process.env.REACT_APP_PROD_API_URL : 'http://localhost:4000';
+
 const httpLink = createHttpLink({
-    uri: 'http://localhost:4000'
+    uri: apiUrl
 })
+
+//Change this to environment variable and set it up in amplify console...
+//Where does API Key go? 
 
 const authLink = setContext((_, { headers }) => {
     const token = localStorage.getItem(AUTH_TOKEN)
